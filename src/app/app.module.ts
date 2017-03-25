@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PlayersModule } from './players/players.module';
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { PlayersModule } from './players/players.module';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule,
     PlayersModule
   ],
   providers: [],
