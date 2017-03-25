@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PlayersModule } from './players/players.module';
 import { AppRoutingModule } from "./app-routing.module";
+import { ApiService } from './shared/api.service';
+import { HttpService } from './shared/http.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { AppRoutingModule } from "./app-routing.module";
     AppRoutingModule,
     PlayersModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    HttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

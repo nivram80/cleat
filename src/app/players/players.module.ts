@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PlayersComponent } from './players.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayersRoutingModule } from './players-routing.module';
+import { PlayerService } from './shared/player.service';
 
 @NgModule({
   imports: [
@@ -12,6 +13,9 @@ import { PlayersRoutingModule } from './players-routing.module';
   declarations: [
     PlayersComponent,
     PlayerListComponent
+  ],
+  providers: [
+    PlayerService
   ]
 })
 export class PlayersModule { }

@@ -1,3 +1,5 @@
-<p>
-  player-list works!
-</p>
+<div *ngFor="let player of players">
+  <div>{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame">*</span></div>
+</div>
+
+<div>* denotes that player has been elected to the Hall of Fame.</div>

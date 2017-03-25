@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../shared/player.model';
+import { PlayerService } from '../shared/player.service';
 
 @Component({
   selector: 'app-player-list',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-list.component.css']
 })
 export class PlayerListComponent implements OnInit {
+  errorMessage: string;
+  players: Player[];
 
-  constructor() { }
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
+    this.getHeroes();
+  }
+
+  getHeroes() {
+    this.playerService.getPlayers()
+      .subscribe(
+        players => this.players = players,
+        error =>  this.errorMessage = <any>error);
   }
 
 }
