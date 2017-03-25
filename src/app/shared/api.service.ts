@@ -19,6 +19,7 @@ export class ApiService {
 
   public handleError(error: Response | any) {
     let errMsg: string;
+
     if (error instanceof Response) {
       const body = error.json() || '';
       const err = body.error || JSON.stringify(body);
@@ -26,6 +27,7 @@ export class ApiService {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
+
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
