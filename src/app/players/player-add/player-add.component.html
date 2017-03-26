@@ -1,28 +1,3 @@
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit()" novalidate>
+<h2>Add Player</h2>
 
-  <h2>Add Player</h2>
-
-  <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
-
-  <div class="form-field">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" formControlName="fname" placeholder="First Name" tabindex="1">
-  </div>
-
-  <div class="form-field">
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lname" formControlName="lname" placeholder="Last Name" tabindex="2">
-  </div>
-
-  <div class="form-field">
-    <label>Hall of Fame</label>
-    <input type="radio" id="yesHallOfFame" name="hallOfName" formControlName="hallOfName" value="true" tabindex="3">
-    <label for="yesHallOfFame">Yes</label>
-
-    <input type="radio" id="noHallOfFame" name="hallOfName" formControlName="hallOfName" value="false">
-    <label for="noHallOfFame">No</label>
-  </div>
-
-  <button type="submit" tabindex="4" [disabled]="playerForm.invalid">Submit</button>
-
-</form>
+<player-form (submit)="onSubmit($event)"></player-form>

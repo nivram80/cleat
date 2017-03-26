@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Player } from '../shared/player.model';
 import { PlayerService } from '../shared/player.service';
+import { Player } from '../shared/player.model';
 
 @Component({
   selector: 'player-add',
@@ -10,30 +9,13 @@ import { PlayerService } from '../shared/player.service';
 })
 export class PlayerAddComponent {
   public player = new Player;
-
-  public playerForm: FormGroup;
-  public fname = new FormControl('', [Validators.required]);
-  public lname = new FormControl('', [Validators.required]);
-  public hallOfFame = new FormControl('', [Validators.required]);
-
   public errorMessage: string;
   public response: any;
 
-  constructor(
-    private fb: FormBuilder,
-    private playerService: PlayerService
-  ) {
+  constructor(private playerService: PlayerService) { }
 
-    this.playerForm = fb.group({
-      'fname': this.fname,
-      'lname': this.lname,
-      'hallOfName': this.hallOfFame
-    });
-
-  }
-
-  public onSubmit() {
-    this.player = this.playerForm.value;
+  public onSubmit(player) {
+    this.player = player;
     this.playerService.addPlayer(this.player)
       .subscribe(
         response => this.response = response,

@@ -6,6 +6,9 @@ import { PlayersRoutingModule } from './players-routing.module';
 import { PlayerService } from './shared/player.service';
 import { PlayerAddComponent } from './player-add/player-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PlayerFormComponent } from './shared/player-form/player-form.component';
+import { PlayerEditComponent } from './player-edit/player-edit.component';
+import { PlayerSelectedService } from './shared/player-selected.service';
 
 @NgModule({
   imports: [
@@ -16,10 +19,13 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     PlayersComponent,
     PlayerListComponent,
-    PlayerAddComponent
+    PlayerAddComponent,
+    PlayerFormComponent,
+    PlayerEditComponent
   ],
   providers: [
-    PlayerService
+    PlayerService,
+    PlayerSelectedService
   ]
 })
 export class PlayersModule { }

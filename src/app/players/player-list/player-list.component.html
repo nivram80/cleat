@@ -1,5 +1,5 @@
 <div *ngFor="let player of players">
-  <div>{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame">*</span></div>
+  <div (click)="selectPlayer(player)">{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame">*</span></div>
 </div>
 
 <div class="footnote">* Hall of Fame</div>

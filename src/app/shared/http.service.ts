@@ -22,4 +22,10 @@ export class HttpService {
       .map(this.apiService.extractData)
       .catch(this.apiService.handleError);
   }
+
+  put(url, data) {
+    return this.http.put(this.apiService.API_ROOT_URL + url, data, this.options)
+      .map(this.apiService.extractData)
+      .catch(this.apiService.handleError);
+  }
 }

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['players.component.css']
 })
 export class PlayersComponent implements OnInit {
+  public selectedPlayer;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public displayEditPlayer(player) {
+    this.selectedPlayer = player;
   }
 
 }

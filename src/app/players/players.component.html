@@ -1,3 +1,5 @@
-<player-list></player-list>
+<player-list (selectedPlayer)="displayEditPlayer($event)"></player-list>
 
-<player-add></player-add>
+<player-add *ngIf="!selectedPlayer"></player-add>
+
+<player-edit *ngIf="selectedPlayer"></player-edit>

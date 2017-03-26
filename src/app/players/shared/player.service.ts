@@ -20,4 +20,8 @@ export class PlayerService {
     return this.httpService.get('/player/' + id);
   }
 
+  editPlayer(data): Observable<Player> {
+    return this.httpService.put('/players/' + data.id, data);
+  }
+
 }
