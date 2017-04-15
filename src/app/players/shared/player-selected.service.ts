@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Player } from './player.model';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class PlayerSelectedService {
-  public selectedPlayer: Player;
-
-  constructor() { }
+  private getSelectedPlayer = new BehaviorSubject<any>(null);
+  public selectedPlayer$ = this.getSelectedPlayer.asObservable();
 
   public setSelectedPlayer(player) {
-    this.selectedPlayer = player
-  }
-
-  public getSelectedPlayer() {
-    return this.selectedPlayer;
+    this.getSelectedPlayer.next(player);
   }
 
 }

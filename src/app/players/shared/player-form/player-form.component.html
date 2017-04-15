@@ -4,27 +4,23 @@
 
   <div class="form-field">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" formControlName="fname" placeholder="First Name" tabindex="1">
+    <input type="text" id="fname" formControlName="fname" placeholder="First Name" tabindex="1">
   </div>
 
   <div class="form-field">
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lname" formControlName="lname" placeholder="Last Name" tabindex="2">
+    <input type="text" id="lname" formControlName="lname" placeholder="Last Name" tabindex="2">
   </div>
 
   <div class="form-field">
     <label>Hall of Fame</label>
-    <input type="radio" id="yesHallOfFame" name="hall_of_fame" formControlName="hall_of_fame" [value]="true" tabindex="3">
+    <input type="radio" id="yesHallOfFame" formControlName="hall_of_fame" [value]="true" tabindex="3">
     <label for="yesHallOfFame">Yes</label>
 
-    <input type="radio" id="noHallOfFame" name="hall_of_fame" formControlName="hall_of_fame" [value]="false">
+    <input type="radio" id="noHallOfFame" formControlName="hall_of_fame" [value]="false">
     <label for="noHallOfFame">No</label>
   </div>
 
-  <input type="hidden" name="id" formControlName="id">
-
   <button type="submit" tabindex="4" [disabled]="playerForm.invalid">Submit</button>
-
-  <p>{{playerForm.value | json}}</p>
 
 </form>

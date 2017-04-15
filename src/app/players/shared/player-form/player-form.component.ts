@@ -1,35 +1,65 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Player } from '../player.model';
+import { PlayerSelectedService } from '../player-selected.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'player-form',
   templateUrl: './player-form.component.html',
   styleUrls: ['./player-form.component.css']
 })
-export class PlayerFormComponent implements OnInit {
+export class PlayerFormComponent implements OnInit, OnDestroy {
 
   @Output() submit: EventEmitter<any> = new EventEmitter();
-  @Input() player: Player;
-
+  public player: Player;
+  public subscription: Subscription;
   public playerForm: FormGroup;
-  // public fname =      new FormControl('', [Validators.required]);
-  // public lname =      new FormControl('', [Validators.required]);
-  // public hall_of_fame = new FormControl('', [Validators.required]);
+  public errorMessage;
+  public fnameChangeLog: string[] = [];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private playerSelectedService: PlayerSelectedService) {
+    this.buildPlayerForm();
+  }
 
   ngOnInit() {
-    this.playerForm = this.fb.group({
-      'fname': new FormControl(this.player ? this.player.fname : '', [Validators.required]),
-      'lname': new FormControl(this.player ? this.player.lname : '', [Validators.required]),
-      'hall_of_fame': new FormControl(this.player ? this.player.hall_of_fame : '', [Validators.required]),
-      'id': new FormControl(this.player ? this.player.id : '')
-    });
+    this.subscription = this.playerSelectedService.selectedPlayer$
+      .subscribe(
+        response => {
+          this.player = response;
+          this.setPlayerFormValues();
+        }
+      );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   public onSubmit() {
-    this.submit.emit(this.playerForm.value);
+    this.player = this.prepareSavePlayer();
+    this.submit.emit(this.player);
   }
 
+  private buildPlayerForm() {
+    this.playerForm = this.fb.group({
+      fname: ['', Validators.required],
+      lname: ['', Validators.required],
+      hall_of_fame: ['', Validators.required]
+    });
+  }
+
+  private setPlayerFormValues() {
+    this.playerForm.reset({
+      fname: this.player.fname,
+      lname: this.player.lname,
+      hall_of_fame: this.player.hall_of_fame,
+    })
+  }
+
+  private prepareSavePlayer() {
+    const playerModel = this.playerForm.value;
+    playerModel.id = this.player.id;
+    return playerModel
+  }
 }
