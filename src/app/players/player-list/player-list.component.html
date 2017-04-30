@@ -1,5 +1,8 @@
-<div *ngFor="let player of players">
-  <div (click)="selectPlayer(player)">{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame">*</span></div>
-</div>
+<h2>Player List</h2>
+
+<section class="list" *ngFor="let player of players">
+  <div class="list-item" (click)="selectPlayer(player)">{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame">*</span></div>
+</section>
 
 <sub class="footnote">* Hall of Fame</sub>
+
