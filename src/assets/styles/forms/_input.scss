@@ -1,0 +1,7 @@
+input {
+
+  &:focus {
+    outline: $cleat-yellow auto 5px;
+    outline-offset: -2px;
+  }
+}

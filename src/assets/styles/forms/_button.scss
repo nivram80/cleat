@@ -1,0 +1,22 @@
+button {
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 2px;
+  height: 31px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $cleat-brown;
+  font-size: .75em;
+  color: $primary-white;
+  @include default-shadow();
+
+  &:focus {
+    outline: none;
+    background-color: $focus-gray;
+  }
+
+  &:active {
+    box-shadow: 0;
+  }
+}
