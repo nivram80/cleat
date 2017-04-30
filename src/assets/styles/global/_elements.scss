@@ -1,0 +1,30 @@
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  background-color: $primary-gray;
+}
+
+h1, h2, h3 {
+  color: $cleat-brown;
+}
+
+h2 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+aside {
+  margin-left: 100px;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
