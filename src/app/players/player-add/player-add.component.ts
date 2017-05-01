@@ -14,7 +14,7 @@ export class PlayerAddComponent {
 
   constructor(private playerService: PlayerService) { }
 
-  public onSubmit(player) {
+  public onPlayerAddSubmit(player) {
     this.player = player;
     this.playerService.addPlayer(this.player)
       .subscribe(

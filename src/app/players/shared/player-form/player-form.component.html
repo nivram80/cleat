@@ -17,10 +17,10 @@
     <input type="radio" id="yesHallOfFame" formControlName="hall_of_fame" [value]="true" tabindex="3">
     <label for="yesHallOfFame">Yes</label>
 
-    <input type="radio" id="noHallOfFame" formControlName="hall_of_fame" [value]="false">
+    <input type="radio" id="noHallOfFame" formControlName="hall_of_fame" [value]="false" tabindex="-1">
     <label for="noHallOfFame">No</label>
   </div>
 
-  <button type="submit" tabindex="4" [disabled]="playerForm.invalid">Submit</button>
+  <button type="submit" tabindex="5">Submit</button>
 
 </form>
