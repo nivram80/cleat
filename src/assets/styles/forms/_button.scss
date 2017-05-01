@@ -16,7 +16,12 @@ button {
     background-color: $focus-brown;
   }
 
+  &:hover {
+    background-color: $focus-brown;
+  }
+
   &:active {
-    box-shadow: 0;
+    box-shadow: none;
+    background-color: $cleat-brown;
   }
 }
