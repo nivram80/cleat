@@ -1,0 +1,17 @@
+.toggle-group {
+  display: inline-flex;
+  flex-direction: row;
+  border: 1px solid $primary-black;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $secondary-gray;
+
+  .toggle {
+    padding: 5px 20px;
+
+    &.active {
+      background-color: $cleat-yellow;
+      color: $primary-black;
+    }
+  }
+}
