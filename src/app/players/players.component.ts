@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-player',
-  templateUrl: 'players.component.html',
-  styleUrls: ['players.component.css']
+  templateUrl: 'players.component.html'
 })
 export class PlayersComponent implements OnInit {
   public selectedPlayer;
@@ -17,4 +16,7 @@ export class PlayersComponent implements OnInit {
     this.selectedPlayer = player;
   }
 
+  public displayAddPlayerForm() {
+    this.selectedPlayer = null;
+  }
 }

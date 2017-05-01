@@ -5,10 +5,8 @@
   </main>
 
   <aside>
-
     <player-add *ngIf="!selectedPlayer"></player-add>
-
-    <player-edit *ngIf="selectedPlayer"></player-edit>
+    <player-edit *ngIf="selectedPlayer" (showAddPlayerForm)="displayAddPlayerForm()"></player-edit>
   </aside>
 
 </div>
