@@ -59,7 +59,9 @@ export class PlayerFormComponent implements OnInit, OnDestroy {
 
   private prepareSavePlayer() {
     const playerModel = this.playerForm.value;
-    playerModel.id = this.player.id;
+    if (this.player) {
+      playerModel.id = this.player.id;
+    }
     return playerModel
   }
 }
