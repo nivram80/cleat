@@ -1,6 +1,8 @@
 <div class="page-content">
 
-  <player-list (selectedPlayer)="displayEditPlayer($event)"></player-list>
+  <main>
+    <player-list (selectedPlayer)="displayEditPlayer($event)"></player-list>
+  </main>
 
   <aside>
     <player-add *ngIf="!selectedPlayer"></player-add>

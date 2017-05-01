@@ -2,6 +2,9 @@ body {
   font-family: 'Dosis', sans-serif;
   font-size: 16px;
   background-color: $primary-gray;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 h1, h2, h3 {
@@ -13,20 +16,26 @@ h2 {
   text-transform: uppercase;
 }
 
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 aside {
-  margin-left: 100px;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .page-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-content: center;
+}
+
+
+@media (min-width: 600px) {
+
+  aside {
+    margin-left: 100px;
+  }
+
+  .page-content {
+    flex-direction: row;
+  }
 }
