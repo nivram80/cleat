@@ -1,4 +1,8 @@
 input {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1em;
+  height: 25px;
+  padding-left: 10px;
 
   &:focus {
     @include focus-outline();

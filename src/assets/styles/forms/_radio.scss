@@ -1,0 +1,13 @@
+.radio-buttons {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  label {
+    margin-right: 20px;
+    position: relative;
+    bottom: 5px;
+  }
+}

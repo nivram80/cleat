@@ -1,0 +1,29 @@
+form {
+  width: 100%;
+
+  .form-field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+
+    &.last {
+      margin-bottom: 25px;
+    }
+
+    > label {
+      display: flex;
+      flex: 1 1 50%;
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: center;
+    }
+
+    > input {
+      flex: 1 1 50%;
+    }
+
+
+  }
+}
