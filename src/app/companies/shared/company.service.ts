@@ -12,4 +12,7 @@ export class CompanyService {
     return this.httpService.get('/companies');
   }
 
+  addCompany(company): Observable<Company> {
+    return this.httpService.post('/companies', company);
+  }
 }

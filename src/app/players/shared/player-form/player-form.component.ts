@@ -14,7 +14,7 @@ export class PlayerFormComponent implements OnInit, OnDestroy {
   public player: Player;
   public subscription: Subscription;
   public playerForm: FormGroup;
-  public errorMessage;
+  public errorMessage: string;
 
   constructor(private fb: FormBuilder, private playerSelectedService: PlayerSelectedService) {
     this.buildPlayerForm();
