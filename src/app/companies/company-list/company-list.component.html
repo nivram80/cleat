@@ -1,0 +1,5 @@
+<h2>Company List</h2>
+
+<section class="list" *ngFor="let company of companies">
+  <div class="list-item" (click)="selectCompany(company)">{{company.name}}</div>
+</section>
