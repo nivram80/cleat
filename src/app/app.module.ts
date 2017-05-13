@@ -8,6 +8,7 @@ import { PlayersModule } from './players/players.module';
 import { AppRoutingModule } from "./app-routing.module";
 import { ApiService } from './shared/api.service';
 import { HttpService } from './shared/http.service';
+import { CompaniesModule } from './companies/companies.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpService } from './shared/http.service';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    PlayersModule
+    PlayersModule,
+    CompaniesModule
   ],
   providers: [
     ApiService,

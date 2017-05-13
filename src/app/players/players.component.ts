@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-player',
+  selector: 'players',
   templateUrl: 'players.component.html'
 })
 export class PlayersComponent implements OnInit {
