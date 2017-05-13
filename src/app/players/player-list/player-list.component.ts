@@ -5,8 +5,7 @@ import { PlayerSelectedService } from '../shared/player-selected.service';
 
 @Component({
   selector: 'player-list',
-  templateUrl: './player-list.component.html',
-  styleUrls: ['./player-list.component.css']
+  templateUrl: './player-list.component.html'
 })
 export class PlayerListComponent implements OnInit {
   public errorMessage: string;

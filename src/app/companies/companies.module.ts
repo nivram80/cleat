@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CompaniesComponent } from './companies.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CompaniesRoutingModule } from './companies-routing.module';
+import { CompanyService } from './shared/company.service';
 
 @NgModule({
   imports: [
@@ -13,5 +14,7 @@ import { CompaniesRoutingModule } from './companies-routing.module';
   declarations: [
     CompaniesComponent
   ]
+  ],
+  providers: [ CompanyService ]
 })
 export class CompaniesModule { }
