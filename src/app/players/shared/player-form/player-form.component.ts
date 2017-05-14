@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class PlayerFormComponent implements OnInit, OnDestroy {
 
   @Output() formSubmit: EventEmitter<any> = new EventEmitter();
+
   public player: Player;
   public subscription: Subscription;
   public playerForm: FormGroup;

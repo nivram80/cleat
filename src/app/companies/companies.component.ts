@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Company } from './shared/company.model';
 
 @Component({
   selector: 'companies',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CompaniesComponent {
 
-  public selectedCompany;
+  public selectedCompany: Company;
 
   public displayEditCompanyForm(company) {
     this.selectedCompany = company;

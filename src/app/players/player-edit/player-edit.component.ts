@@ -1,13 +1,16 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { PlayerService } from '../shared/player.service';
 import { PlayerSelectedService } from '../shared/player-selected.service';
+import { Player } from '../shared/player.model';
 
 @Component({
   selector: 'player-edit',
   templateUrl: './player-edit.component.html'
 })
 export class PlayerEditComponent {
+
   @Output() showAddPlayerForm: EventEmitter<any> = new EventEmitter();
+
   public player;
   public errorMessage: string;
   public response: any;

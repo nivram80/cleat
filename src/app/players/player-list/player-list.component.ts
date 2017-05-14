@@ -8,15 +8,14 @@ import { PlayerSelectedService } from '../shared/player-selected.service';
   templateUrl: './player-list.component.html'
 })
 export class PlayerListComponent implements OnInit {
-  public errorMessage: string;
-  public players: Player[];
 
   @Output() selectedPlayer: EventEmitter<any> = new EventEmitter();
 
+  public errorMessage: string;
+  public players: Player[];
+
   constructor(
-    private playerService: PlayerService,
-    private playerSelectedService: PlayerSelectedService
-  ) { }
+    private playerService: PlayerService, private playerSelectedService: PlayerSelectedService) { }
 
   ngOnInit() {
     this.getHeroes();

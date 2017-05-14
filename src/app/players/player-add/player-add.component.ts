@@ -6,6 +6,7 @@ import { PlayerService } from '../shared/player.service';
   templateUrl: './player-add.component.html'
 })
 export class PlayerAddComponent {
+
   public errorMessage: string;
   public response: any;
 
