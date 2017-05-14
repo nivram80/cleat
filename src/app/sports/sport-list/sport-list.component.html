@@ -1,0 +1,5 @@
+<h2>Sport List</h2>
+
+<section class="list" *ngFor="let sport of sports">
+  <div class="list-item" (click)="selectSport(sport)">{{sport.name}}</div>
+</section>

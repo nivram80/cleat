@@ -1,0 +1,12 @@
+<div class="page-content">
+
+  <main>
+    <sport-list (selectedSport)="displayEditSportForm($event)"></sport-list>
+  </main>
+
+  <aside>
+    <sport-add *ngIf="!selectedSport"></sport-add>
+    <sport-edit *ngIf="selectedSport" (showAddSportForm)="displayAddSportForm()"></sport-edit>
+  </aside>
+
+</div>

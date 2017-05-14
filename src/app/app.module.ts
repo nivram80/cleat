@@ -9,6 +9,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { ApiService } from './shared/api.service';
 import { HttpService } from './shared/http.service';
 import { CompaniesModule } from './companies/companies.module';
+import { SportsModule } from './sports/sports.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CompaniesModule } from './companies/companies.module';
     HttpModule,
     AppRoutingModule,
     PlayersModule,
-    CompaniesModule
+    CompaniesModule,
+    SportsModule
   ],
   providers: [
     ApiService,
