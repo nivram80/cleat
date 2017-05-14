@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'companies',
   templateUrl: './companies.component.html'
 })
-export class CompaniesComponent implements OnInit {
+export class CompaniesComponent {
 
-  constructor() { }
+  public selectedCompany;
 
-  ngOnInit() {
+  public displayEditCompanyForm(company) {
+    this.selectedCompany = company;
+  }
+
+  public displayAddCompanyForm() {
+    this.selectedCompany = null;
   }
 
 }

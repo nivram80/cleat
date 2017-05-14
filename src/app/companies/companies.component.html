@@ -1,11 +1,12 @@
 <div class="page-content">
 
   <main>
-    <company-list></company-list>
+    <company-list (selectedCompany)="displayEditCompanyForm($event)"></company-list>
   </main>
 
   <aside>
-    <company-add></company-add>
+    <company-add *ngIf="!selectedCompany"></company-add>
+    <company-edit *ngIf="selectedCompany" (showAddCompanyForm)="displayAddCompanyForm()"></company-edit>
   </aside>
 
 </div>

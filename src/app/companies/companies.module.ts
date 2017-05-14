@@ -7,6 +7,8 @@ import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyService } from './shared/company.service';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyFormComponent } from './shared/company-form/company-form.component';
+import { CompanyEditComponent } from './company-edit/company-edit.component';
+import { CompanySelectedService } from './shared/company-selected.service';
 
 @NgModule({
   imports: [
@@ -18,8 +20,12 @@ import { CompanyFormComponent } from './shared/company-form/company-form.compone
     CompaniesComponent,
     CompanyListComponent,
     CompanyAddComponent,
-    CompanyFormComponent
+    CompanyFormComponent,
+    CompanyEditComponent
   ],
-  providers: [ CompanyService ]
+  providers: [
+    CompanyService,
+    CompanySelectedService
+  ]
 })
 export class CompaniesModule { }

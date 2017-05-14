@@ -15,4 +15,8 @@ export class CompanyService {
   addCompany(company): Observable<Company> {
     return this.httpService.post('/companies', company);
   }
+
+  editCompany(data): Observable<Company> {
+    return this.httpService.put('/companies/' + data.id, data);
+  }
 }
