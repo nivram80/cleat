@@ -1,0 +1,12 @@
+<div class="page-content">
+
+  <main>
+    <condition-list (selectedCondition)="displayEditConditionForm($event)"></condition-list>
+  </main>
+
+  <aside>
+    <condition-add *ngIf="!selectedCondition"></condition-add>
+    <condition-edit *ngIf="selectedCondition" (showAddConditionForm)="displayAddConditionForm()"></condition-edit>
+  </aside>
+
+</div>

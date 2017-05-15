@@ -1,0 +1,5 @@
+<h2>Condition List</h2>
+
+<section class="list" *ngFor="let condition of conditions">
+  <div class="list-item" (click)="selectCondition(condition)">{{condition.grade}}</div>
+</section>

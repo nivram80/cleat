@@ -10,6 +10,7 @@ import { ApiService } from './shared/api.service';
 import { HttpService } from './shared/http.service';
 import { CompaniesModule } from './companies/companies.module';
 import { SportsModule } from './sports/sports.module';
+import { ConditionsModule } from './conditions/conditions.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SportsModule } from './sports/sports.module';
     AppRoutingModule,
     PlayersModule,
     CompaniesModule,
-    SportsModule
+    SportsModule,
+    ConditionsModule
   ],
   providers: [
     ApiService,
