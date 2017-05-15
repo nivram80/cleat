@@ -11,6 +11,7 @@ import { HttpService } from './shared/http.service';
 import { CompaniesModule } from './companies/companies.module';
 import { SportsModule } from './sports/sports.module';
 import { ConditionsModule } from './conditions/conditions.module';
+import { TeamsModule } from './teams/teams.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConditionsModule } from './conditions/conditions.module';
     PlayersModule,
     CompaniesModule,
     SportsModule,
-    ConditionsModule
+    ConditionsModule,
+    TeamsModule
   ],
   providers: [
     ApiService,

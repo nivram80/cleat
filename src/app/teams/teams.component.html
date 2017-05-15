@@ -1,0 +1,12 @@
+<div class="page-content">
+
+  <main>
+    <team-list (selectedTeam)="displayEditTeamForm($event)"></team-list>
+  </main>
+
+  <aside>
+    <team-add *ngIf="!selectedTeam"></team-add>
+    <team-edit *ngIf="selectedTeam" (showAddTeamForm)="displayAddTeamForm()"></team-edit>
+  </aside>
+
+</div>
