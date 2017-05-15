@@ -25,15 +25,32 @@ form {
 
     > label {
       display: flex;
-      flex: 1 1 50%;
+      flex: 1 1 40%;
       flex-direction: column;
       align-content: flex-start;
       justify-content: center;
     }
 
-    > input {
-      flex: 1 1 50%;
+    > input, select {
+      flex: 1 1 60%;
     }
 
   }
+
+  input, select {
+    font: 1em 'Dosis', sans-serif;
+    height: 30px;
+    background-color: $primary-white;
+    border: 1px solid $accent-gray;
+    border-radius: 0;
+    padding: 0 0 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:focus {
+      @include focus-outline();
+    }
+  }
+
 }
