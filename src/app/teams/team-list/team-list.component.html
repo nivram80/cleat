@@ -1,5 +1,5 @@
 <h2>Team List</h2>
 
 <section class="list" *ngFor="let team of teams">
-  <div class="list-item" (click)="selectTeam(team)">{{team.name}}</div>
+  <div class="list-item" (click)="selectTeam(team)">{{team.city}} {{team.mascot}}</div>
 </section>
