@@ -1,8 +1,5 @@
 .form-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center);
 
   a {
     color: $cleat-yellow;
@@ -14,21 +11,15 @@ form {
 
   .form-field {
     margin-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: center;
+    @include flex(row, flex-start, center);
 
     &.last {
       margin-bottom: 25px;
     }
 
     > label {
-      display: flex;
       flex: 1 1 40%;
-      flex-direction: column;
-      align-content: flex-start;
-      justify-content: center;
+      @include flex(column, flex-start, center);
     }
 
     > input, select {

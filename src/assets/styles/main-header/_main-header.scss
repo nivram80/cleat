@@ -1,0 +1,52 @@
+main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 75px;
+  background-color: $cleat-brown;
+  color: $primary-white;
+  border-bottom: 6px solid $cleat-yellow;
+  @include default-shadow();
+}
+
+.main-header-container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  @include flex(row, flex-start, center);
+}
+
+.title {
+  margin-right: 75px;
+  height: 100%;
+  @include flex(row, flex-start, center);
+}
+
+.logo {
+  color: $primary-white;
+  font-size: 2.5em;
+  margin: auto;
+}
+
+nav {
+  @include flex(row, center, flex-start);
+
+  > div {
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include flex(column, center, center);
+    border-bottom: 2px solid transparent;
+
+    &:hover, &.active {
+      border-bottom-color: $primary-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

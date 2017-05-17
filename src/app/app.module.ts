@@ -12,10 +12,12 @@ import { CompaniesModule } from './companies/companies.module';
 import { SportsModule } from './sports/sports.module';
 import { ConditionsModule } from './conditions/conditions.module';
 import { TeamsModule } from './teams/teams.module';
+import { MainHeaderComponent } from './main-header/main-header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainHeaderComponent
   ],
   imports: [
     BrowserModule,

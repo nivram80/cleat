@@ -2,9 +2,7 @@ body {
   font-family: 'Dosis', sans-serif;
   font-size: 16px;
   background-color: $primary-gray;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 10px;
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -21,26 +19,34 @@ a {
   text-decoration: underline;
 }
 
-aside {
-  width: 100%;
-  max-width: 350px;
-}
+app-root {
+  @include flex(column, flex-start, flex-start);
 
-.page-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-}
-
-
-@media (min-width: 600px) {
+  > main {
+    max-width: 1440px;
+    width: 100%;
+    margin: 81px auto 0;
+    padding: 20px 10px 0;
+  }
 
   aside {
-    margin-left: 100px;
+    width: 100%;
+    max-width: 350px;
   }
 
   .page-content {
-    flex-direction: row;
+    @include flex(column, flex-start, center);
+  }
+
+
+  @media (min-width: 600px) {
+
+    aside {
+      margin-left: 100px;
+    }
+
+    .page-content {
+      flex-direction: row;
+    }
   }
 }
