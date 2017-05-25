@@ -20,6 +20,7 @@ form {
     > label {
       flex: 1 1 40%;
       @include flex(column, flex-start, center);
+      max-width: 140px;
     }
 
     > input, select {
