@@ -1,0 +1,102 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <div class="form-field">
+    <label for="sport">Sport</label>
+    <select type="text" id="sport" tabindex="1">
+      <option *ngFor="let sport of sports" [ngValue]="sport.id">{{sport.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="year">Year</label>
+    <select type="text" id="year" formControlName="year" tabindex="2">
+      <option *ngFor="let year of years" [ngValue]="year">{{year}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="company">Company</label>
+    <select type="text" id="company" formControlName="company_id" tabindex="9">
+      <option *ngFor="let company of companies" [ngValue]="company.id">{{company.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="cardNumber">Card Number</label>
+    <input type="number" id="cardNumber" formControlName="card_number" tabindex="10">
+  </div>
+
+  <div class="form-field">
+    <label for="player">Player</label>
+    <select type="text" id="player" formControlName="player_id" tabindex="2">
+      <option *ngFor="let player of players" [ngValue]="player.id">{{player.lname}}, {{player.fname}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="team">Team</label>
+    <select type="text" id="team" formControlName="team_id" tabindex="3">
+      <option *ngFor="let team of teams" [ngValue]="team.id">{{team.city}} {{team.mascot}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label>Rookie</label>
+
+    <div class="radio-buttons">
+
+      <div class="radio-button">
+        <input type="radio" id="yesRookie" formControlName="rookie_year" [value]="true" tabindex="7">
+        <label for="yesRookie">Yes</label>
+      </div>
+
+      <div class="radio-button">
+        <input type="radio" id="noRookie" formControlName="rookie_year" [value]="false" tabindex="-1">
+        <label for="noRookie">No</label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="form-field">
+    <label>Autograph</label>
+
+    <div class="radio-buttons">
+
+      <div class="radio-button">
+        <input type="radio" id="yesAutograph" formControlName="autograph" [value]="true" tabindex="8">
+        <label for="yesAutograph">Yes</label>
+      </div>
+
+      <div class="radio-button">
+        <input type="radio" id="noAutograph" formControlName="autograph" [value]="false" tabindex="-1">
+        <label for="noAutograph">No</label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="form-field">
+    <label for="condition">Condition</label>
+    <select type="text" id="condition" formControlName="condition_id" tabindex="9">
+      <option *ngFor="let condition of conditions" [ngValue]="condition.id">{{condition.grade}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="guidePrice">Guide Price</label>
+    <input type="text" id="guidePrice" formControlName="guide_price" tabindex="10">
+  </div>
+
+  <div class="form-field last">
+    <label for="salePrice">Sale Price</label>
+    <input type="text" id="salePrice" formControlName="sale_price" tabindex="11">
+  </div>
+
+  <button type="submit" tabindex="12">Submit</button>
+
+</form>

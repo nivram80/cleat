@@ -1,0 +1,5 @@
+<h2>Card List</h2>
+
+<section class="list" *ngFor="let card of cards">
+  <div class="list-item" (click)="selectCard(card)">#{{card.card_number}} {{card.year}} {{card.company}} {{card.player.fname}} {{card.player.lname}} - {{card.team}}</div>
+</section>

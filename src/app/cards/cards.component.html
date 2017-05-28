@@ -1,0 +1,12 @@
+<div class="page-content">
+
+  <main>
+    <card-list (selectedCard)="displayEditCard($event)"></card-list>
+  </main>
+
+  <aside>
+    <card-add *ngIf="!selectedCard"></card-add>
+    <card-edit *ngIf="selectedCard" (showAddCardForm)="displayAddCardForm()"></card-edit>
+  </aside>
+
+</div>

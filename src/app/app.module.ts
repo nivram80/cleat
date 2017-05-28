@@ -13,6 +13,7 @@ import { SportsModule } from './sports/sports.module';
 import { ConditionsModule } from './conditions/conditions.module';
 import { TeamsModule } from './teams/teams.module';
 import { MainHeaderComponent } from './main-header/main-header.component';
+import { CardsModule } from './cards/cards.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MainHeaderComponent } from './main-header/main-header.component';
     CompaniesModule,
     SportsModule,
     ConditionsModule,
-    TeamsModule
+    TeamsModule,
+    CardsModule
   ],
   providers: [
     ApiService,
